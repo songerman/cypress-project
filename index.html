@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Счетчик с полями ввода</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .counter {
+            margin-right: 20px;
+        }
+
+        .input-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .input-container input {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1 data-cy="counter-heading">Счетчик с полями ввода</h1>
+<div class="container">
+    <div class="counter">
+        <h2>Counter:</h2>
+        <div id="counter" data-cy="counter-value">0</div>
+    </div>
+    <div>
+        <button id="increaseBtn" data-cy="increase-btn">Увеличить</button>
+        <button id="decreaseBtn" data-cy="decrease-btn">Уменьшить</button>
+        <button id="resetBtn" data-cy="reset-btn">Сбросить</button>
+    </div>
+</div>
+<div class="input-container">
+    <input type="text" id="input1" data-cy="input-1" placeholder="Поле 1">
+    <input type="text" id="input2" data-cy="input-2" placeholder="Поле 2">
+    <button id="confirmBtn" data-cy="confirm-btn" disabled>Confirm</button>
+</div>
+<p id="errorText" class="error" data-cy="error-text"></p>
+<p id="successText" class="success" data-cy="success-text"></p>
+
+<script src="form.js"></script>
+</body>
+</html>
