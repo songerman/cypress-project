@@ -1,7 +1,7 @@
 describe('Home page', () => {
     describe('Counter', () => {
         beforeEach(() => {
-            cy.visit('http://localhost:3000');
+            cy.visit('/');
         });
 
         it('displays the correct title', () => {
@@ -27,7 +27,7 @@ describe('Home page', () => {
 
     describe('Input', () => {
         beforeEach(() => {
-            cy.visit('http://localhost:3000');
+            cy.visit('/');
         });
 
         it('disables Confirm button when input fields are not filled', () => {
