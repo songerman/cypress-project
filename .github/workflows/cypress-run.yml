@@ -13,6 +13,8 @@ jobs:
 
       - name: Start server
         run: node server.js
+      - name: Run build
+        uses: npm serve
       - name: Run tests
         uses: cypress-io/github-action@v5
         with:
