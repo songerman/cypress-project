@@ -4,13 +4,17 @@ jobs:
   cypress-run:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
           node-version: '14'
-      # Install npm dependencies, cache them correctly
-      # and run all Cypress tests
-      - uses: cypress-io/github-action@v5
+
+      - name: Start server
+        run: node server.js
+      - name: Run tests
+        uses: cypress-io/github-action@v5
         with:
           browser: chrome
           headed: true
