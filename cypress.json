@@ -1,5 +1,0 @@
-{
-  "env": {
-    "baseUrl": "${CYPRESS_BASE_URL}"
-  }
-}
