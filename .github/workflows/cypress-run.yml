@@ -29,6 +29,21 @@ jobs:
         with:
           browser: chrome
 
+  macos-headless-chrome:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - name: Run tests
+        uses: cypress-io/github-action@v5
+        with:
+          browser: chrome
+          headed: true
+
   macos-firefox:
     runs-on: macos-latest
     steps:
@@ -56,6 +71,44 @@ jobs:
         uses: cypress-io/github-action@v5
         with:
           browser: edge
-
+  windows-chrome:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - name: Run tests
+        uses: cypress-io/github-action@v5
+        with:
+          browser: chrome
+  windows-firefox:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - name: Run tests
+        uses: cypress-io/github-action@v5
+        with:
+          browser: firefox
+  windows-edge:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - name: Run tests
+        uses: cypress-io/github-action@v5
+        with:
+          browser: edge
 
 
