@@ -15,47 +15,47 @@ jobs:
         with:
           browser: chrome
 
-    macos-chrome:
-      runs-on: macos-latest
-      steps:
-        - name: Checkout repository
-          uses: actions/checkout@v3
-        - name: Setup Node
-          uses: actions/setup-node@v3
-          with:
-            node-version: '14'
-        - name: Run tests
-          uses: cypress-io/github-action@v5
-          with:
-            browser: chrome
+  macos-chrome:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - name: Run tests
+        uses: cypress-io/github-action@v5
+        with:
+          browser: chrome
 
-    macos-firefox:
-      runs-on: macos-latest
-      steps:
-        - name: Checkout repository
-          uses: actions/checkout@v3
-        - name: Setup Node
-          uses: actions/setup-node@v3
-          with:
-            node-version: '14'
-        - name: Run tests
-          uses: cypress-io/github-action@v5
-          with:
-            browser: firefox
+  macos-firefox:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - name: Run tests
+        uses: cypress-io/github-action@v5
+        with:
+          browser: firefox
 
-    macos-edge:
-      runs-on: macos-latest
-      steps:
-        - name: Checkout repository
-          uses: actions/checkout@v3
-        - name: Setup Node
-          uses: actions/setup-node@v3
-          with:
-            node-version: '14'
-        - name: Run tests
-          uses: cypress-io/github-action@v5
-          with:
-            browser: edge
+  macos-edge:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - name: Run tests
+        uses: cypress-io/github-action@v5
+        with:
+          browser: edge
 
 
 
